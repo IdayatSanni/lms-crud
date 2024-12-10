@@ -10,14 +10,13 @@
     <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">{{$student -> fname}}</h5>
-                <a href="{{route('students.edit',$student -> id)}}">
-                    Edit
-                </a>
-                <a href="{{route('students.trash',$student -> id)}}" style="margin-left:10px;">
-                    Delete
-                </a>
+                <h5 class="card-title">{{ $student -> fname }}</h5>
+                <hr>
+                <a href="{{  route('students.edit', $student -> id) }}">Edit</a>
+                <a href="{{  route('students.trash', $student -> id) }}">Delete</a>
+                <a href="{{ route('students.create') }}">Create</a>
             </div>
+            
         </div>
     </div>
     @endforeach

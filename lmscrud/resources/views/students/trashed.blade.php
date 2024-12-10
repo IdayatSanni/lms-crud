@@ -10,14 +10,12 @@
     <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">{{$student -> fname}}</h5>
-                <a href="{{route('students.restore',$student -> id)}}">
-                    Restore
-                </a>
-                <a href="{{route('students.destroy',$student -> id)}}" style="margin-left:10px;">
-                    Delete Permanently
-                </a>
+                <h5 class="card-title">{{ $student -> fname }}</h5>
+                <hr>
+                <a href="{{  route('students.restore', $student -> id) }}">Restore</a>
+                <a href="{{  route('students.destroy', $student -> id) }}">Delete Permanently</a>
             </div>
+            
         </div>
     </div>
     @endforeach

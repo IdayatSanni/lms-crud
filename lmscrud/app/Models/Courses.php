@@ -6,18 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-class Student extends Model
+class Courses extends Model
 {
-    /** @use HasFactory<\Database\Factories\StudentFactory> */
+    /** @use HasFactory<\Database\Factories\CoursesFactory> */
     use HasFactory;
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'fname',
-        'lname',
-        'email'
+        'course_name',      
+        'course_index',
+        'course_description',
+        
     ];
 }

@@ -13,7 +13,7 @@
     <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">{{ $course -> course_name }}</h5>
+                <h5 class="card-title">{{ $course -> coursename }}</h5>
                 <hr>
                 <a href="{{  route('courses.restore', $course -> id) }}">Restore</a>
                 <a href="{{  route('courses.destroy', $course -> id) }}">Delete Permanently</a>

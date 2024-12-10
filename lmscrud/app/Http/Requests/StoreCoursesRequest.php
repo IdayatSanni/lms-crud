@@ -22,9 +22,9 @@ class StoreCoursesRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'coursename' => 'required|string|max:200', 
-            'courseteacher' => 'required|string|max:500', 
-            'coursecode' => 'nullable|string|max:50', 
+            'course_name' => 'required|string|max:255', // Ensure the course name is a required string with a max length of 255 characters
+            'course_index' => 'required|string|max:50', // Ensure the course index is required, a string, with a max length of 50 characters
+            'course_description' => 'nullable|string|max:500', // The description is optional but if provided, it should be a string with a max length of 500 characters
         ];
     }
 }
